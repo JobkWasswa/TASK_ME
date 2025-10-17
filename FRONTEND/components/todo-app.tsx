@@ -8,8 +8,7 @@ import { TodoInput } from "./todo-input";
 import { TodoHeader } from "./todo-header";
 import { TodoFilters } from "./todo-filters";
 
-const baseUrl = process.env.API_BASE_URL;
-
+const API_BASE_URL = "http://127.0.0.1:8000/api/todos/";
 
 async function fetchApi(url: string, method: string, data?: any): Promise<any> {
   const response = await fetch(url, {
@@ -42,7 +41,7 @@ export function TodoApp() {
 
   const loadTodos = useCallback(async () => {
     try {
-      const data: Todo[] = await fetchApi(`${baseUrl}/api/todos`, "GET");
+      const data: Todo[] = await fetchApi(API_BASE_URL, "GET");
       setTodos(data);
     } catch (error) {
       console.error("Failed to load todos from API:", error);
@@ -68,11 +67,7 @@ export function TodoApp() {
     };
 
     try {
-      const newTodo: Todo = await fetchApi(
-        `${baseUrl}/api/todos`,
-        "POST",
-        newTodoData
-      );
+      const newTodo: Todo = await fetchApi(API_BASE_URL, "POST", newTodoData);
 
       setTodos((prevTodos) => [newTodo, ...prevTodos]);
     } catch (error) {
@@ -84,7 +79,7 @@ export function TodoApp() {
     id: string,
     updates: Partial<Omit<Todo, "id" | "createdAt">>
   ) => {
-    const todoUrl = `${baseUrl}${id}/`;
+    const todoUrl = `${API_BASE_URL}${id}/`;
 
     try {
       const updatedTodo: Todo = await fetchApi(todoUrl, "PATCH", updates);
@@ -105,7 +100,7 @@ export function TodoApp() {
   };
 
   const deleteTodo = async (id: string) => {
-    const todoUrl = `${baseUrl}${id}/`;
+    const todoUrl = `${API_BASE_URL}${id}/`;
 
     try {
       await fetchApi(todoUrl, "DELETE");
@@ -117,7 +112,7 @@ export function TodoApp() {
   };
 
   const clearCompleted = async () => {
-    const clearCompletedUrl = `${baseUrl}clear_completed/`;
+    const clearCompletedUrl = `${API_BASE_URL}clear_completed/`;
 
     try {
       await fetchApi(clearCompletedUrl, "DELETE");
