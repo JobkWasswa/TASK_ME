@@ -1,4 +1,4 @@
-# 🚀 Task ME - The Task Manager
+# 🚀 TASK ME - The Task Manager
 
 **Task ME** is a modern, full-stack task management application designed to help you organize your daily activities and accomplish your goals.
 
