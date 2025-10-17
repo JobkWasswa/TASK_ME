@@ -1,4 +1,4 @@
-# 🚀 Task ME - The Universal Task Manager
+# 🚀 Task ME - The Task Manager
 
 **Task ME** is a modern, full-stack task management application designed to help you organize your daily activities and accomplish your goals.
 
@@ -38,8 +38,8 @@ To run this project locally, you need to set up both the backend API and the fro
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your-Repo-URL]
-    cd TaskMi/backend # Navigate to your Django project directory
+    git clone [TASK_ME]
+    cd TASK_ME/BACKEND # Navigate to your Django project directory
     ```
 
 2.  **Create a virtual environment and install dependencies:**
@@ -74,7 +74,7 @@ To run this project locally, you need to set up both the backend API and the fro
 
 1.  **Navigate to the frontend directory:**
     ```bash
-    cd ../frontend # (Assuming frontend is in a sibling folder)
+    cd ../FRONTEND # (Assuming frontend is in a sibling folder)
     ```
 
 2.  **Install dependencies:**
@@ -101,6 +101,4 @@ To run this project locally, you need to set up both the backend API and the fro
 
 
 
-## 🤝 Contributing
 
-(If applicable, add instructions on how others can contribute to your project.)
