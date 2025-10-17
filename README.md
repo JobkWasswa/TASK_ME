@@ -47,8 +47,8 @@ To run this project locally, you need to set up both the backend API and the fro
     python -m venv venv
     source venv/bin/activate  # Linux/macOS
     .\venv\Scripts\activate  # Windows
-    pip install -r requirements.txt # (Assuming you create this file)
-    # OR: pip install django djangorestframework mysqlclient django-cors-headers
+    
+    pip install django djangorestframework mysqlclient django-cors-headers
     ```
 
 3.  **Database Configuration:**
@@ -74,7 +74,7 @@ To run this project locally, you need to set up both the backend API and the fro
 
 1.  **Navigate to the frontend directory:**
     ```bash
-    cd ../FRONTEND # (Assuming frontend is in a sibling folder)
+    cd ../FRONTEND 
     ```
 
 2.  **Install dependencies:**
@@ -89,7 +89,7 @@ To run this project locally, you need to set up both the backend API and the fro
     ```typescript
     const API_BASE_URL = "[http://127.0.0.1:8000/api/todos/](http://127.0.0.1:8000/api/todos/)";
     ```
-    If your backend is running elsewhere, update this constant.
+    
 
 4.  **Start the Frontend:**
     ```bash
